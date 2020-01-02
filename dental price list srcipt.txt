@@ -1,0 +1,49 @@
+muhammad@golden-eagle-ae
+
+USE [ClinicPro]
+GO
+
+INSERT INTO [dbo].[Fees]
+           ([Code]
+           ,[Description]
+           ,[Amount]
+           ,[NetPrice]
+           ,[Clinic]
+           ,[LastUpdated]
+           ,[UpdatedBy]
+           ,[CategoryID]
+           ,[FeeGroupID]
+           ,[FeeServiceTypeID]
+           ,[ShortDesc]
+           ,[ColOrder]
+           ,[Cost]
+           ,[BranchID]
+           ,[NetworkID]
+           ,[VAT]
+           ,[Loyalty])
+
+	SELECT 
+      [CPT Code]
+      ,[CPT Description]
+      ,[Net Price]
+	  ,[Net Price]
+	  ,3
+	  ,GETDATE()
+	  ,1
+	  ,1
+	  ,1
+	  ,6
+	  ,SUBSTRING([CPT Description],0,50)
+	  ,100000
+	  ,0
+	  ,6
+	  ,NULL
+	  ,0
+	  ,0
+
+  FROM [ClinicProBak].[dbo].[Dental Price Cash Royal London]
+GO
+
+
+
+

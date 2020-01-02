@@ -1,0 +1,10 @@
+ update DoctorGPData set IsHead = 0 where IsHead is null 
+&BranchID=3
+
+search column exist in any tables 
+
+USE {{Database Name}}
+SELECT * 
+    FROM INFORMATION_SCHEMA.COLUMNS 
+    WHERE TABLE_NAME = '{{Table Name}}'
+    AND COLUMN_NAME = '{{Column Name}}'
